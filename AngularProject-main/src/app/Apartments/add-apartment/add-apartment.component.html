@@ -1,0 +1,50 @@
+<form [formGroup]="apartementform" (ngSubmit)="addApartment()"  >
+  <div class="form-group">
+    <label for="apartNum">Apartment Number:</label>
+    <input type="text" formControlName="apartNum" id="apartNum">
+    <div style="color :red"  *ngIf="apartementform.get('apartNum')?.invalid && apartementform.get('apartNum')?.touched"> Apartment Number is required . </div>
+  </div>
+  <div class="form-group">
+    <label for="floorNum">Floor Number:</label>
+    <input type="text" formControlName="floorNum" id="floorNum">
+    <div style="color :red"  *ngIf="apartementform.get('floorNum')?.invalid && apartementform.get('floorNum')?.touched"> Floor Number is required . </div>
+  </div>
+  <div class="form-group">
+    <label for="surface">Surface:</label>
+    <input type="text" formControlName="surface" id="surface">
+    <div style="color :red"  *ngIf="apartementform.get('surface')?.invalid && apartementform.get('surface')?.touched"> Surface is required . </div>
+  </div>
+  <div class="form-group">
+    <label for="terrace">Terrace:</label>
+    <div>
+      <input type="radio" formControlName="terrace" value="yes" id="terrace-yes">
+      <label for="terrace-yes">Yes</label>
+      <input type="radio" formControlName="terrace" value="Non" id="terrace-no">
+      <label for="terrace-no">No</label>
+    </div>
+    <div style="color :red"  *ngIf="apartementform.get('terrace')?.invalid && apartementform.get('terrace')?.touched"> Terrace is required . </div>
+  </div>
+  <div class="form-group">
+    <label for="surfaceterrace">Surface Terrace:</label>
+    <input type="text" formControlName="surfaceterrace" id="surfaceterrace">
+    <div style="color :red"  *ngIf="apartementform.get('surfaceterrace')?.invalid && apartementform.get('surfaceterrace')?.touched"> Surface Terrace is required . </div>
+  </div>
+  <div class="form-group">
+    <label for="category">Category:</label>
+    <div>
+      <input type="radio" formControlName="category" value="S+1" id="category-s1">
+      <label for="category-s1">S+1</label>
+      <input type="radio" formControlName="category" value="S+2" id="category-s2">
+      <label for="category-s2">S+2</label>
+      <input type="radio" formControlName="category" value="S+3" id="category-s3">
+      <label for="category-s3">S+3</label>
+    </div>
+    <div style="color :red"  *ngIf="apartementform.get('category')?.invalid && apartementform.get('category')?.touched"> Category is required . </div>
+  </div>
+  <div class="form-group">
+    <label for="ResidenceId">Residence ID:</label>
+    <input type="text" formControlName="ResidenceId" id="ResidenceId">
+    <div style="color :red"  *ngIf="apartementform.get('ResidenceId')?.invalid && apartementform.get('ResidenceId')?.touched"> Residence ID is required . </div>
+  </div>
+  <button type="submit" class="submit-button" [disabled]="apartementform.invalid">Submit</button>
+</form>

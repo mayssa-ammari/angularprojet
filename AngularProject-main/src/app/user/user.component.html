@@ -1,0 +1,12 @@
+<p>user works!</p>
+<form [formGroup]="Userform" (ngSubmit)="addUser()"  >
+<label for="name">Name:</label>
+<input type="text"  formControlName="username" >
+<div style="color :red"  *ngIf="Userform.get('username')?.invalid && Userform.get('username')?.touched"> Name is required. </div>
+
+<label for="City">City:</label>
+<input type="text"  formControlName="city">
+<div style="color :red"  *ngIf="Userform.get('city')?.invalid && Userform.get('city')?.touched"> city is required. </div>
+<button [disabled]="Userform.invalid">Submit</button>
+
+</form>

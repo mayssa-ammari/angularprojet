@@ -1,0 +1,88 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('https://www.immoba.fr/site/images/normal/Picture33259984jpg_5da9c506db6db.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.form-container {
+  background-color: #ffffff;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+    .form-container h2 {
+      color: #1877f2;
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 14px;
+      color: #606770;
+      margin-bottom: 5px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="radio"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ccd0d5;
+      border-radius: 6px;
+      outline: none;
+    }
+
+    .form-group input[type="radio"] {
+      width: auto;
+      margin-right: 5px;
+    }
+
+    .form-group div {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .form-group div label {
+      margin: 0;
+    }
+
+    .form-group input:focus {
+      border-color: #1877f2;
+      box-shadow: 0 0 0 2px rgba(24, 119, 242, 0.3);
+    }
+
+    .submit-button {
+      background-color: #1877f2;
+      color: #ffffff;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      padding: 10px 15px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .submit-button:hover {
+      background-color: #166fe5;
+    }
+
+    .submit-button:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(24, 119, 242, 0.3);
+    }
